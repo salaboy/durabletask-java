@@ -212,10 +212,10 @@ public final class DurableTaskGrpcClient extends DurableTaskClient {
           Span span = tracer.spanBuilder("dapr.workflow.grpc.raiseEvent")
               .startSpan();
           try {
-            TraceContext.Builder traceContextBuilder = TraceContext.newBuilder();
-            traceContextBuilder.setTraceParent(span.getSpanContext().getTraceId());
-            traceContextBuilder.setSpanID(span.getSpanContext().getSpanId());
-            builder.setParentTraceContext(traceContextBuilder.build());
+//            TraceContext.Builder traceContextBuilder = TraceContext.newBuilder();
+//            traceContextBuilder.setTraceParent(span.getSpanContext().getTraceId());
+//            traceContextBuilder.setSpanID(span.getSpanContext().getSpanId());
+//            builder.setParentTraceContext(traceContextBuilder.build());
 
             RaiseEventRequest request = builder.build();
             this.sidecarClient.raiseEvent(request);
