@@ -29,6 +29,7 @@ dependencies {
     implementation 'com.google.protobuf:protobuf-java:3.25.5'
     implementation "io.micrometer:micrometer-observation:${micrometerVersion}"
     implementation "io.opentelemetry:opentelemetry-api:${otelVersion}"
+    implementation "io.opentelemetry:opentelemetry-context:${otelVersion}"
     runtimeOnly "io.grpc:grpc-netty-shaded:${grpcVersion}"
 
     compileOnly "org.apache.tomcat:annotations-api:6.0.53"
